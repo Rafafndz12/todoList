@@ -1,24 +1,25 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-const TaskSchema = new mongoose.Schema({
+const Task = sequelize.define('Task', {
     titulo: {
-        type: String,
-        required: true,
+        type: DataTypes.STRING,
+        allowNull: false
     },
     descripcion: {
-        type: String,
+        type: DataTypes.STRING
     },
     completada: {
-        type: Boolean,
-        default: false,
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     },
     fecha_creacion: {
-        type: Date,
-        default: Date.now,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
     },
     fecha_vencimiento: {
-        type: Date,
-    },
+        type: DataTypes.DATE
+    }
 });
 
-module.exports = mongoose.model('Task', TaskSchema);
+module.exports = Task;

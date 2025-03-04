@@ -4,15 +4,16 @@
     "description": "Aplicación de lista de tareas",
     "main": "app.js",
     "scripts": {
-      "start": "node app.js",
-      "dev": "nodemon app.js"
+        "start": "node app.js",
+        "dev": "nodemon app.js"
     },
     "dependencies": {
-      "express": "^4.17.1",
-      "mongoose": "^5.12.3"
+        "express": "^4.17.1",
+        "mongoose": "^5.12.3",
+        "mysql2": "^3.12.0",
+        "sequelize": "^6.37.5"
     },
     "devDependencies": {
-      "nodemon": "^2.0.7"
+        "nodemon": "^2.0.7"
     }
-  }
-  
+}
